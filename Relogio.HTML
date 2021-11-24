@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+	<title>Relogio</title>
+<script>
+	function displayTime(){
+		var elt = document.getElementById("hora");
+		var now= new Date();
+		elt.innerHTML = now.toLocaleTimeString();
+		setTimeout(displayTime, 1000);
+	}
+window.onload = displayTime;
+</script>
+<style>
+ #hora {
+ font: bold 24pt sans;
+ padding: 10px;
+ background-color: #27737A;
+ border-radius: 50%;
+ border-style: solid;
+}
+body, html{
+    background-image: linear-gradient(45grad, #263D45, #3B5E6B, #497585, #508091 );
+    background-attachment: fixed;
+
+}
+</style>
+</head>
+<body>
+<h1><center>Relogio <center></h1>
+<center><span id="hora"></span></center>
+</body>
+</html>
